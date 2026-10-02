@@ -58,5 +58,5 @@ php index.php
 - [x] Parse JSON
 - [x] Read forecast time
 - [x] Read air temperature
-- [ ] Print multiple forecast hours
-- [ ] Use a loop for the forecast
+- [x] Print multiple forecast hours
+- [x] Use a loop for the forecast

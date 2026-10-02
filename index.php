@@ -17,5 +17,12 @@ $response = file_get_contents($url, false, $context);
 
 $data = json_decode($response, true);
 
-echo $data["properties"]["timeseries"][0]["time"] . " " .
-     $data["properties"]["timeseries"][0]["data"]["instant"]["details"]["air_temperature"] . "C";
+for ($i = 0; $i <= 3; $i += 3) {
+    $time = $data["properties"]["timeseries"][$i]["time"];
+    $temperature = $data["properties"]["timeseries"][$i]["data"]["instant"]["details"]["air_temperature"];
+
+    $dateTime = new DateTime($time);
+    $dateTime->setTimezone(new DateTimeZone("Europe/Tallinn"));
+
+    echo $dateTime->format("H:i") . " local → " . $temperature . "C" . PHP_EOL;
+}
