@@ -42,7 +42,8 @@ The coordinates are added as query parameters:
 Example:
 
 ```text
-2026-10-02T11:00:00Z 13.1C
+15:00 local → 15.6C
+18:00 local → 14.3C
 ```
 
 ## Run
